@@ -5,7 +5,6 @@
   --font-size: .95rem;
 }
 
-/* Labels */
 [data-tag=Productivity].rm-page-ref-tag {
   background: var(--link-color);
   padding: 0.25rem;
@@ -13,7 +12,6 @@
   color: white !important;
 }
 
-/* Small interface tweaks */
 .rm-hr {
   margin-top: 0.875rem;
   height: 1px;
@@ -22,15 +20,36 @@
 }
 
 .check-container {
-  top: -5px;
   margin-right: 0.25rem;
+}
+
+.check-container .checkmark {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+}
+
+.check-container .checkmark:after {
+  left: 5.5px;
+  top: 1.5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}
+
+.check-container input:checked ~ .checkmark {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
 }
 
 .roam-center, .roam-body-main {
   border-radius: 0.5rem 0.5rem 0 0 !important;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display {
   font-family: var(--header-font);
 }
